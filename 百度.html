@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .leftdiv{
+            float: left;
+        }
+        .middlediv{
+            float: left;
+            position: relative;
+        }
+        .rightdiv{
+            float: right;
+            position: relative;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+            margin-right: 20px;
+        }
+        .login{
+            color: white;
+            background-color: rgb(0, 132, 255);
+            padding: 3px 10px 3px 10px;
+            border-radius: 5px;
+        }
+        a:hover{
+            color: blue;
+        }
+        .login:hover{
+            background-color: rgb(0, 110, 255);
+            color: white;
+        }
+        .hiddlediv{
+            width: 240px;
+            height: 300px;
+            position: absolute;
+            top: 24px;
+            box-shadow: 0px 0px 5px 5px gainsboro ;
+            border-radius: 5px;
+            left: -190px;
+            display: none;
+            background-color: white;
+        }
+        .middlediv a:hover+div{
+            display: block;
+        }
+        .hiddlediv:hover{
+            display: block;
+        }
+        
+        .hiddlediv-top div{
+            width: 60px;
+            height: 70px;
+            margin-left: 10px;
+            margin-right: 10px;
+            float: left;
+            margin-top: 5px;
+            /* background-color: yellow; */
+            background-size: 50px 50px;
+            text-align: center;
+        }
+        .hiddlediv-bottom{
+            height: 60px;
+            text-align: center;
+            line-height: 100px;
+            /* position: absolute; */
+        }
+        .inputdiv{
+            width: 650px;
+            height: 50px;
+            background-color:rgb(0, 132, 255);
+            margin: auto;
+            border-radius: 10px;
+            /* position: relative;           */
+        }
+        input{
+            width: 550px;
+            height: 50px;
+            float: left;
+            box-sizing: border-box;
+            /* border-radius: 10px; */
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-color: rgb(0, 132, 255);
+        }
+        .baidu{
+            width: 100px;
+            height:50px;
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+        }
+        .camrea{
+            background-image: url(	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/searchbox/nicon-10750f3f7d.png);
+            width: 24px;
+            height: 20px;
+            position: absolute;
+            background-position: 0 -48px;
+            top: 223px;
+            left: 825px;
+        }
+        .camrea:hover{
+            background-image: url(	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/searchbox/nicon-10750f3f7d.png);
+            width: 24px;
+            height: 20px;
+            position: absolute;
+            background-position: 0 -73px;
+            top: 223px;
+            left: 825px;
+        }
+        .microphone{
+            background-image: url(	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/searchbox/nicon-10750f3f7d.png);
+            width: 24px;
+            height: 20px;
+            position: absolute;
+            background-position: 0 -0px;
+            top: 223px;
+            left: 790px;
+        }
+        .microphone:hover{
+            background-image: url(	https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/searchbox/nicon-10750f3f7d.png);
+            width: 24px;
+            height: 20px;
+            position: absolute;
+            background-position: 0 -24px;
+            top: 223px;
+            left: 790px;
+        }
+        .resou{
+            /* background-color: aqua; */
+            box-sizing: border-box;
+            width: 200px;
+            height: 25px;
+            margin-top: 60px;
+            margin-left: 300px;
+            font-weight: 900;
+        }
+        .xiahuaxian:hover{
+            text-decoration: underline;
+        }
+        .shuzi{
+            color: red;
+        }
+        .re{
+            background-color: #f60;
+            font-size: 14px;
+            padding: 0px 2px 1px 2px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            color: white;
+        }
+        .xinwen1{
+            /* background-color: aqua; */
+            box-sizing: border-box;
+            width: 350px;
+            height: 25px;
+            margin-left: 300px;
+            margin-top: 10px;
+        }
+        .xinwen2{
+            /* background-color: aqua; */
+            box-sizing: border-box;
+            width: 350px;
+            height: 25px;
+            margin-left: 650px;
+            margin-top: -25px;
+            /* float: right; */
+        }
+        .xinwen3{
+            /* background-color: aqua; */
+            box-sizing: border-box;
+            width: 350px;
+            height: 25px;
+            margin-left: 300px;
+            margin-top: 10px;
+        }
+        .xinwen4{
+            /* background-color: aqua; */
+            box-sizing: border-box;
+            width: 350px;
+            height: 25px;
+            margin-left: 650px;
+            margin-top: -25px;
+        }
+        .xinwen5{
+            /* background-color: aqua; */
+            box-sizing: border-box;
+            width: 350px;
+            height: 25px;
+            margin-left: 300px;
+            margin-top: 10px;
+        }
+        .xinwen6{
+            /* background-color: aqua; */
+            box-sizing: border-box;
+            width: 350px;
+            height: 25px;
+            margin-left: 650px;
+            margin-top: -25px;
+        }
+        .dibu{
+            font-size: 12px;
+            color: #bbb;   
+        }
+        .dibu1{
+            font-size: 12px;
+            color: #bbb;   
+        }
+        .dibu:hover{
+            color: black;
+        }
+        .dibuhezi{
+            width: 1250px;
+            height: 25px;
+            position: absolute;
+            bottom: 0px;
+            /* color: #bbb; */
+        }
+        .hiddlediv1{
+            width: 100px;
+            height: 150px;
+            position: absolute;
+            top: 25px;
+            right: 80px;
+            box-shadow: 0px 0px 5px 5px gainsboro ;
+            border-radius: 5px;
+            background-color: white;
+            display: none;
+        }
+        .hiddlediv1:hover{
+            display: block;
+        }
+        .rightdiv a:hover+div{
+            display: block;
+        }
+        .hiddlediv-zi div{
+            width: 100px;
+            height: 20px; 
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            float: left;
+            margin-top: 5px;
+            /* background-color: yellow; */
+            /* background-size: 100px 20px; */
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="margin: 1%;">
+    <div>
+        <div class="leftdiv">
+          <a href="http://news.baidu.com/" target=”_blank”>新闻</a>
+          <a href="https://www.hao123.com/" target=”_blank”>hao123</a>
+          <a href="http://map.baidu.com/" target=”_blank”>地图</a>
+          <a href="http://tieba.baidu.com/" target=”_blank”>贴吧</a>
+          <a href="https://haokan.baidu.com/?sfrom=baidu-top" target=”_blank”>视频</a>
+          <a href="http://image.baidu.com/" target=”_blank”>图片</a>
+          <a href="https://pan.baidu.com/?from=1026962h" target=”_blank”>网盘</a>
+        </div>
+        <div class="middlediv">
+            <a href="http://www.baidu.com/more/" target=”_blank”>更多</a>
+            <div class="hiddlediv">
+                <div class="hiddlediv-top">
+                    <div > 
+                        <a href="http://fanyi.baidu.com/" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newfanyi-da0cea8f7e.png"  alt=""></a> 翻译
+                    </div>
+                    <div > 
+                        <a href="http://xueshu.baidu.com/" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newxueshuicon-a5314d5c83.png" width="60px" height="52px" alt=""></a> 学术
+                    </div>
+                    <div > 
+                        <a href="https://wenku.baidu.com/" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newwenku-d8c9b7b0fb.png" width="60px" height="52px" alt=""></a> 文库
+                    </div>
+                    <div > 
+                        <a href="https://baike.baidu.com/" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newbaike-889054f349.png" width="60px" height="52px" alt=""></a> 百科
+                    </div>
+                    <div > 
+                        <a href="https://zhidao.baidu.com/" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newzhidao-da1cf444b0.png" width="60px" height="52px" alt=""></a> 知道
+                    </div>
+                    <div > 
+                        <a href="https://jiankang.baidu.com/widescreen/home" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newjiankang-f03b804b4b.png" width="60px" height="52px" alt=""></a> 健康
+                    </div>
+                    <div > 
+                        <a href="http://e.baidu.com/ebaidu/home?refer=887" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/yingxiaoicon-612169cc36.png" width="60px" height="52px" alt=""></a> 营销推广
+                    </div>
+                    <div > 
+                        <a href="https://live.baidu.com/" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newzhibo-a6a0831ecd.png" width="60px" height="52px" alt=""></a> 直播
+                    </div>
+                    <div > 
+                        <a href="http://music.taihe.com/" target=”_blank”><img src="https://dss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/topnav/newyinyue-03ecd1e9b9.png" width="60px" height="52px" alt=""></a> 音乐
+                    </div>
+                </div>
+                <div class="hiddlediv-bottom"> 
+                    <a href="http://www.baidu.com/more/" target=”_blank”>查看百度的全部产品></a>
+                </div>
+            </div>
+        </div>
+        <div class="rightdiv"> 
+            <a href="">设置</a>
+            <div class="hiddlediv1">
+               <div class="hiddlediv-zi">
+                <div>
+                    <a href="">搜索设置</a>
+                </div>
+                <div>
+                    <a href="">高级搜索</a>
+                </div>
+                <div>
+                    <a href="https://www.baidu.com/duty/privacysettings.html">关闭预测</a>
+                </div>
+                <div>
+                    <a href="">隐私设置</a>
+                </div>
+                <div>
+                    <a href="">关闭热搜</a>
+                </div>
+               </div>
+            </div>
+            <a class="login" href="https://passport.baidu.com/v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2F&sms=5">登录</a>
+        </div>
+    </div>
+    <div style="padding-top: 50px; text-align: center;">  
+       <a href="https://www.baidu.com/s?wd=%E7%99%BE%E5%BA%A6%E7%83%AD%E6%90%9C&sa=ire_dl_gh_logo_texing&rsv_dl=igh_logo_pcs"><img style="width: 300px;" src="https://www.baidu.com/img/PCtm_d9c8750bed0b3c7d089fa7d55720d6cf.png" alt=""></a> 
+    </div>
+    <div class="inputdiv">
+        <input type="text">
+        <div class="baidu">百度一下</div>
+        <div class="camrea" title="按图片搜索"></div>
+        <div class="microphone" title="语音输入"></div>
+    </div>
+    <div class="resou">
+        <a href="">百度热搜&nbsp;></a>
+    </div>
+    <div class="zong">
+        <div class="xinwen1">
+            <a href="" class="shuzi">1</a>
+            <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E5%8D%81%E4%B9%9D%E5%B1%8A%E4%B8%AD%E5%A4%AE%E7%BA%AA%E5%A7%94%E5%85%AD%E6%AC%A1%E5%85%A8%E4%BC%9A%E5%85%AC%E6%8A%A5%E8%A6%81%E7%82%B9&rsv_idx=2&rsv_dl=fyb_n_homepage&sa=fyb_n_homepage&hisfilter=1" target=”_blank” class="xiahuaxian">十九届中央纪委六次全会公报要点</a>
+            <span class="re">热</span>
+        </div>
+        <div class="xinwen2">
+            <a href="" class="shuzi">4</a>
+            <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E5%8C%97%E4%BA%AC%E6%96%B0%E5%A2%9E10%E4%BE%8B%E6%9C%AC%E5%9C%9F%E7%A1%AE%E8%AF%8A6%E4%BE%8B%E6%97%A0%E7%97%87%E7%8A%B6&rsv_idx=2&rsv_dl=fyb_n_homepage&sa=fyb_n_homepage&hisfilter=1" target=”_blank” class="xiahuaxian">北京新增10例本土确诊6例无症状</a>
+            <span class="re">热</span>
+        </div>
+        <div class="xinwen3">
+            <a href="" class="shuzi">2</a>
+            <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=31%E7%9C%81%E5%8C%BA%E5%B8%82%E6%96%B0%E5%A2%9E%E6%9C%AC%E5%9C%9F%E7%A1%AE%E8%AF%8A23%E4%BE%8B&rsv_idx=2&rsv_dl=fyb_n_homepage&sa=fyb_n_homepage&hisfilter=1" target=”_blank” class="xiahuaxian">31省区市新增本土确诊23例</a>
+            <span class="re">热</span>
+        </div>
+        <div class="xinwen4">
+            <a href="" class="shuzi">5</a>
+            <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E8%A5%BF%E5%AE%89%E5%AE%B6%E6%9A%B4%E4%BA%8B%E4%BB%B6%E7%9F%A5%E6%83%85%E4%BA%BA%3A%E5%A6%BB%E5%AD%90%E4%B9%9F%E6%89%93%E4%BA%86%E4%B8%88%E5%A4%AB&rsv_idx=2&rsv_dl=fyb_n_homepage&sa=fyb_n_homepage&hisfilter=1" target=”_blank” class="xiahuaxian">西安家暴事件知情人:妻子也打了丈夫</a>
+            <span class="re">热</span>
+        </div>
+        <div class="xinwen5">
+            <a href="" class="shuzi">3</a>
+            <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E8%AE%B2%E5%A5%BD%E5%86%AC%E5%A5%A5%E6%95%85%E4%BA%8B+%E5%85%B1%E8%B5%B4%E5%86%B0%E9%9B%AA%E4%B9%8B%E7%BA%A6&rsv_idx=2&rsv_dl=fyb_n_homepage&sa=fyb_n_homepage&hisfilter=1" target=”_blank” class="xiahuaxian">讲好冬奥故事 共赴冰雪之约</a>
+            <span class="re">热</span>
+        </div>
+        <div class="xinwen6">
+            <a href="" class="shuzi">6</a>
+            <a href="https://www.baidu.com/s?cl=3&tn=baidutop10&fr=top1000&wd=%E9%83%91%E5%B7%9E%E7%89%B9%E5%A4%A7%E6%9A%B4%E9%9B%A8%E7%81%BE%E5%AE%B3%3A%E9%80%AE%E6%8D%958%E4%BA%BA%E9%97%AE%E8%B4%A389%E4%BA%BA&rsv_idx=2&rsv_dl=fyb_n_homepage&sa=fyb_n_homepage&hisfilter=1" target=”_blank” class="xiahuaxian"> 郑州特大暴雨灾害:逮捕8人问责89人</a>
+            <span class="re">热</span>
+        </div>
+    </div>
+    <div class="dibuhezi">
+        <div class="leftdiv dibu "><a href="https://home.baidu.com/" target=”_blank” class="dibu">关于百度</a></div>
+        <div class="leftdiv dibu"><a href="http://ir.baidu.com/" target=”_blank” class="dibu">About Baidu</a></div>
+        <div class="leftdiv dibu"><a href="https://help.baidu.com/" target=”_blank” class="dibu">使用百度前必读</a></div>
+        <div class="leftdiv dibu"><a href="file:///C:/Users/SB/Desktop/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/%E7%99%BE%E5%BA%A6.html" target=”_blank” class="dibu">京公网安备11000002000001号</a></div>
+        <div class="leftdiv dibu"><a href="https://beian.miit.gov.cn/" target=”_blank” class="dibu">京ICP证030173号</a></div>
+        <div class="leftdiv dibu1">©2022 Baidu</div>
+        <div class="leftdiv dibu1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;互联网药品信息服务资格证书 (京)-经营性-2017-0020</div>
+        <div class="leftdiv dibu"><a href="https://www.baidu.com/licence/" target=”_blank” class="dibu">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;信息网络传播视听节目许可证 0110516</a></div>
+    </div>
+</body>
+</html>
